@@ -20,11 +20,12 @@ export class CartComponent implements OnInit {
   constructor(private CS: CartService, private FB: FormBuilder) {}
 
   clearCart() {
-    window.alert('Your cart has been cleared');
+    alert('Your cart has been emptied');
     this.cart = this.CS.clearCart();
   }
 
   onSubmit() {
+    alert('Your order has been submitted');
     console.warn('Your order has been submitted', this.checkoutForm.value);
     this.cart = this.CS.clearCart();
     this.checkoutForm.reset();

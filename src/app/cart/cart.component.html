@@ -9,8 +9,18 @@
   <hr class="m-0">
 </div>
 
+<h6 class="text-muted mt-4">Enter your name and address, hit the "Purchase"-Button and your items will be in your hands soon! Yay!</h6>
 
+<form class="my-2" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
 
-<form [formGroup]="checkoutForm">
+  <div class="col-12 col-md-8 col-lg-4">
+    <label class="form-label" for="name">Name:</label><br>
+    <input class="form-control" id="name" type="text" formControlName="name">
+  </div>
+  <div class="col-12 col-md-8 col-lg-4">
+    <label class="form-label" for="address">Address:</label><br>
+    <input class="form-control" id="address" type="text" formControlName="address">
+  </div>
+
   <button class="btn btn-lg btn-secondary text-dark my-4" type="submit">Purchase</button>
 </form>
