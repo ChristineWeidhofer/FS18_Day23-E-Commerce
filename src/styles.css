@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.wrap {
+  margin: 2rem auto 6rem;
+}
+
 .btn-secondary {
   background-color: #BEE5E5;
   border: none;

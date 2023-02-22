@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IProduct } from './IProduct';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -9,8 +10,8 @@ export class CartService {
 
   constructor() { }
 
-  addToCart(something: IProduct) {
-    this.cart.push(something);
+  addToCart(product: IProduct) {
+    this.cart.push(product);
   }
 
   getCart() {

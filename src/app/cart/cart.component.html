@@ -1,1 +1,16 @@
-<p>cart works!</p>
+<h1 class="text-center display-4">Your Shopping Cart:</h1>
+
+<div *ngFor="let val of cart" class="cart-area">
+  <div class="d-flex align-items-baseline">
+    <img src="../../assets/{{ val.image }}" alt="{{ val.name }}" class="my-1" width="100">
+    <h5 class="ms-2">{{val.name}}</h5>
+    <p class="ms-2">€ {{val.price}},--</p>
+  </div>
+  <hr class="m-0">
+</div>
+
+
+
+<form [formGroup]="checkoutForm">
+  <button class="btn btn-lg btn-secondary text-dark my-4" type="submit">Purchase</button>
+</form>
