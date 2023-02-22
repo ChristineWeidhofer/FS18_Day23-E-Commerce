@@ -1,0 +1,13 @@
+<h1 class="text-center display-4 my-4">{{product.name}}</h1>
+
+<div *ngIf="product" class="my-5 text-center">
+
+  <img src="../../assets/{{ product.image }}" alt="{{ product.name }}" class="mt-2 img-link">
+  <h3 class="mt-4">{{ product.name }}</h3>
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+  <p class="fs-4">Price: € {{ product.price }},--</p>
+  <button class="btn btn-lg btn-secondary text-dark" click="addToCart()">Buy </button>
+
+</div>
