@@ -1,14 +1,15 @@
 <h1 class="text-center display-4">Our Designer Toys</h1>
 
 <!-- use cards then to make it more beautiful -->
-<div *ngFor="let val of products; index as productID" class="my-4">
 
-    <img src="../../assets/{{ val.image }}" alt="{{ val.name }}" class="mt-5 img-pointer" width="250" routerLink="/products/{{productID}}">
-    <h3>{{ val.name }}</h3>
-    <hr class="w-25">
-    <p *ngIf="val.description">
-      Description: {{ val.description }}
-    </p>
-    <button class="btn btn-outline-secondary" routerLink="/products/{{productID}}">Details &#8680;</button>
-
+<div class="row row-cols-3 mx-auto">
+  <div *ngFor="let val of products; index as productID" class="my-4">
+      <img src="../../assets/{{ val.image }}" alt="{{ val.name }}" class="mt-5 img-pointer" width="250" routerLink="/products/{{productID}}">
+      <h3>{{ val.name }}</h3>
+      <hr class="w-25">
+      <p *ngIf="val.description">
+        Description: {{ val.description }}
+      </p>
+      <button class="btn btn-outline-secondary" routerLink="/products/{{productID}}">Details &#8680;</button>
+  </div>
 </div>

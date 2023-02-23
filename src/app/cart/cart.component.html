@@ -1,10 +1,11 @@
 <h1 class="text-center display-4">Your Shopping Cart:</h1>
 
+<p *ngIf="this.cart.length == 0" class="turquoise fs-4 py-4">Your cart is empty</p> <!-- yeah, finally got it to work, woo hoo! -->
 <div *ngFor="let val of cart" class="cart-area">
   <div class="d-flex align-items-baseline">
     <img src="../../assets/{{ val.image }}" alt="{{ val.name }}" class="my-1" width="100">
     <h5 class="ms-2">{{val.name}}</h5>
-    <p class="ms-2">€ {{val.price}},--</p>
+    <p class="ms-2">{{val.price | currency}}</p>
   </div>
   <hr class="m-0">
 </div>

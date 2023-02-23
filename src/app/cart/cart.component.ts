@@ -8,6 +8,7 @@ import { IProduct } from '../IProduct';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
+
 export class CartComponent implements OnInit {
   cart: Array<IProduct> = [];
   checkoutForm = this.FB.group( // eine neue Art, eine FormGroup zu erstellen
